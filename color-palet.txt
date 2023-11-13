@@ -1,0 +1,8 @@
+color palet to use throughout
+
+
+--misty-rose: #f4dbd8ff;
+--rose-quartz: #bea8a7ff;
+--rosy-brown: #c09891ff;
+--liver: #775144ff;
+--black-bean: #2a0800ff;
