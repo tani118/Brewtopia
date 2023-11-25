@@ -1,0 +1,10 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+#prod1 {
+
+    max-width: 150px;
+    max-height: 150px;
+}
