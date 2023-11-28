@@ -1,11 +1,22 @@
 html {
-    background-color: #fbf6e8;
+    background-color: mistyrose;
+    back
+
+    /* 
+misty-rose: #f4dbd8ff;
+rose-quartz: #bea8a7ff;
+rosy-brown: #c09891ff;
+liver: #775144ff;
+black-bean: #2a0800ff; */
 }
-h1{
+
+h1 {
     display: flex;
-     font-family: "Papyrus"; 
-     align-items: center;
-     justify-content: center;
+    text-align: center;
+    font-family: "Papyrus";
+    color: #775144ff;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -15,37 +26,67 @@ label {
     flex-direction: column;
     align-items: justify;
     margin-top: 1.5rem;
-    font-family:"Geo";
+    font-family: "Geo";
     /* font-style:italic; */
     font-size: larger;
+    /* color:#c64621; */
 
 }
 
-input,placeholder{
+input,
+placeholder {
     width: 18rem;
-    font-family:"Courier", "Helvetica", "Helvetica Neue";
+    font-family: "Courier", "Helvetica", "Helvetica Neue";
     font-style: italic;
-    
+
 }
 
 .details {
-   position: relative;
+    position: relative;
     /* top: 60px; */
-    /* height: 80vh; */
+    height: 70vh;
     justify-content: center;
     display: flex;
-    /* background-color: aqua; */
+    border-radius: 10%;
+
 }
 
 #signin_button {
-    background-color: brown;
+    background: none;
     display: block;
+    position: relative;
     margin-top: 15%;
-    margin-left: 35%;
     border-radius: 50%;
-    height: 3.7rem;
-    padding:0.5rem;
-    font-family: none;
+    height: 4.7rem;
+    width: 4.7rem;
+    padding: 0.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: none;
+    font-family: "Geo";
+    font-size:137%;
+    right: 30%;
+}
 
+#signin_button:hover {
+    background-color: chocolate;
+    width: 5rem;
+    font-size: x-large;
+}
+
+#beargif img {
+    position: relative;
+    max-width: 100%;
+
+}
+
+#beargif {
+    /* position: absolute; */
+    display: block;
+    /* left: 13rem; */
+    /* top: 3rem; */
+    margin-right: 1%;
+    /* width: 10%; */
+    height: 65%;
+    object-fit: none;
+    object-position: -40px;
 }

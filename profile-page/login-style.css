@@ -1,14 +1,15 @@
 html {
     background-color: #fbf6e8;
+
 }
 
 .logo_image {
     width: 15%;
-    height: 15%;
+    /* height: 15%; */
 
     display: block;
     margin-left: 42%;
-    margin-right: 50%;
+    /* margin-right: 50%; */
 }
 
 .login_details_div {
@@ -30,9 +31,9 @@ html {
 #username,
 #Password {
     margin: 1%;
+    width:12rem;
     text-size-adjust: inherit;
 }
-
 
 #login_button {
     margin-bottom: 1%;
@@ -47,5 +48,15 @@ html {
     font-size: larger;
     border-radius: 50%;
     border: none;
+}
 
+#hellobear img{
+    position: relative;
+}
+
+#hellobear{
+    position: absolute;
+    display: flex;
+    top: 64.5%;
+    transform: rotate(270deg);
 }
