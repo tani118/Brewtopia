@@ -14,21 +14,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-
+    
     $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        // User exists, check password
         $row = $result->fetch_assoc();
         $storedPassword = $row["password"];
 
         if (password_verify($password, $storedPassword)) {
-            // Redirect to signin.html
             echo "<script>window.location.href = 'home-page/index.html';</script>";
-            exit(); // Ensure the script stops execution after the redirect
+            exit(); 
         } else {
             echo "Incorrect password";
         }

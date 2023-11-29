@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="signin-style.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Geo" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Philosopher" />
-    <title>Document</title>
+    <title>Signin</title>
     <style>
     .error {
         color: red;
