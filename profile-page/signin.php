@@ -9,9 +9,9 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Philosopher" />
     <title>Document</title>
     <style>
-        .error {
-            color: red;
-        }
+    .error {
+        color: red;
+    }
     </style>
 </head>
 
@@ -44,7 +44,8 @@
 
             <!-- confirm password -->
             <label for="confirmPassword">Confirm Password</label>
-            <input type="password" name="confirmPassword" placeholder="Confirm your password" id="confirmPassword" required>
+            <input type="password" name="confirmPassword" placeholder="Confirm your password" id="confirmPassword"
+                required>
             <span class="error"><?php echo $errors["confirmPassword"] ?? ""; ?></span>
 
             <!-- sign-in button -->
@@ -54,46 +55,43 @@
     </div>
 
     <script>
-        function validateForm() {
-            var name = document.getElementById("Name").value;
-            var email = document.getElementById("email").value;
-            var password = document.getElementById("password").value;
-            var confirmPassword = document.getElementById("confirmPassword").value;
+    function validateForm() {
+        var name = document.getElementById("Name").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
 
-            document.getElementById("nameError").innerHTML = "";
-            document.getElementById("emailError").innerHTML = "";
-            document.getElementById("passwordError").innerHTML = "";
-            document.getElementById("confirmPasswordError").innerHTML = "";
+        document.getElementById("nameError").innerHTML = "";
+        document.getElementById("emailError").innerHTML = "";
+        document.getElementById("passwordError").innerHTML = "";
+        document.getElementById("confirmPasswordError").innerHTML = "";
 
-            if (name === "") {
-                document.getElementById("nameError").innerHTML = "Name is required";
-                return false;
-            }
-
-            if (email === "") {
-                document.getElementById("emailError").innerHTML = "Email is required";
-                return false;
-            }
-
-            if (password === "") {
-                document.getElementById("passwordError").innerHTML = "Password is required";
-                return false;
-            }
-
-            if (confirmPassword === "") {
-                document.getElementById("confirmPasswordError").innerHTML = "Please confirm your password";
-                return false;
-            }
-
-            if (password !== confirmPassword) {
-                document.getElementById("confirmPasswordError").innerHTML = "Passwords do not match";
-                return false;
-            }
-
-            // Additional validation logic can be added here
-
-            return true;
+        if (name === "") {
+            document.getElementById("nameError").innerHTML = "Name is required";
+            return false;
         }
+
+        if (email === "") {
+            document.getElementById("emailError").innerHTML = "Email is required";
+            return false;
+        }
+
+        if (password === "") {
+            document.getElementById("passwordError").innerHTML = "Password is required";
+            return false;
+        }
+
+        if (confirmPassword === "") {
+            document.getElementById("confirmPasswordError").innerHTML = "Please confirm your password";
+            return false;
+        }
+
+        if (password !== confirmPassword) {
+            document.getElementById("confirmPasswordError").innerHTML = "Passwords do not match";
+            return false;
+        }
+        return true;
+    }
     </script>
 
 </body>

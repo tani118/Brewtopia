@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 $dbname = "example";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -10,16 +10,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+$errors = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    $confirmPassword = $_POST["confirmPassword"];
+    $username = mysqli_real_escape_string($conn, $_POST["username"]);
+    $email = mysqli_real_escape_string($conn, $_POST["email"]);
+    $password = mysqli_real_escape_string($conn, $_POST["password"]);
+    $confirmPassword = mysqli_real_escape_string($conn, $_POST["confirmPassword"]);
 
     // Validation
-    $errors = [];
-
     if (empty($username)) {
         $errors["username"] = "Name is required";
     }
@@ -42,14 +41,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // If there are no validation errors, proceed with database insertion
     if (empty($errors)) {
-        $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+        $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashedPassword')";
 
         if ($conn->query($sql) === TRUE) {
             echo "Record created successfully";
+            echo "<script>window.location.href = 'login.php';</script>";
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "<script>window.location.href = 'SignUp.php';</script>";
         }
     }
 }
 
-?>
+$conn->close();

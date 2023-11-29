@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+a {
+  color: black;
+}
+
+header {
+  height: 101px;
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%),
+    0 0 2px rgb(0 0 0 / 7%);
+}
+
+.header-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 51px;
+  width: 51px;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 100%;
+  margin-left: 16px;
+}
+
+.left-nav {
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+}
+
+
+#sign-up,
+#Login {
+  padding: 7px 16px;
+  border: 1px solid;
+  border-radius: 50px;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+#sign-up {
+  margin-right: 16px;
+}
+
+#sign-up {
+  background-color: rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+}
+
+#Login {
+  background-color: black;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+#Login:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-color: rgba(0, 0, 0, 0.7);
+}
